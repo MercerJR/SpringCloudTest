@@ -19,7 +19,7 @@ public class PaymentController {
     private PaymentService service;
 
     @PostMapping(value = "/create")
-    public Response create(Payment payment){
+    public Response create(@RequestBody Payment payment){
         int result = service.insert(payment);
         log.info("***插入结果：" + payment);
         if (result > 0){
