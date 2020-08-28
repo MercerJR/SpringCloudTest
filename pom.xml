@@ -12,6 +12,8 @@
   <modules>
     <module>cloud-provider-payment8081</module>
     <module>cloud-consumer-80</module>
+    <module>cloud-api-commons</module>
+      <module>cloud-eureka-server-7001</module>
   </modules>
 
   <!--统一管理jar包版本-->

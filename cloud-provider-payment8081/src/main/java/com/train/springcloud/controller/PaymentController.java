@@ -2,6 +2,8 @@ package com.train.springcloud.controller;
 
 import com.train.springcloud.data.Response;
 import com.train.springcloud.entities.Payment;
+import com.train.springcloud.exception.CustomException;
+import com.train.springcloud.exception.CustomExceptionType;
 import com.train.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +38,7 @@ public class PaymentController {
         if (payment != null){
             return new Response().success(payment);
         }else {
-            return new Response().validateFailed("操作失败");
+            throw new CustomException(CustomExceptionType.SYSTEM_ERROR,"操作失败");
         }
     }
 }
