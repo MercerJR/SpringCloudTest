@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://116.62.13.6:3306/cloud_project?serverTimezone=GMT%2B8
-    username: mercer
+    username: root
     password: Justmyself957!
 
 eureka:
